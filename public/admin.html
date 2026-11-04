@@ -1,0 +1,45 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Admin</h1>
+
+  <p id="pesan"></p>
+
+  <h2 id="judulForm">Tambah barang</h2>
+  <form id="formProduk">
+    <input type="hidden" id="kode">
+    <p>
+      <label>Nama: <input type="text" id="nama" required maxlength="100"></label>
+    </p>
+    <p>
+      <label>Harga (Rp): <input type="number" id="harga" required min="0" max="99999999.99" step="0.01"></label>
+    </p>
+    <p>
+      <label>Stok: <input type="number" id="stok" required min="0" step="1"></label>
+    </p>
+    <p>
+      <button type="submit" id="btnSimpan">Tambah</button>
+      <button type="button" id="btnBatal" hidden>Batal</button>
+    </p>
+  </form>
+
+  <h2>Daftar barang</h2>
+  <table border="1" cellpadding="4">
+    <thead>
+      <tr>
+        <th>Kode</th>
+        <th>Nama</th>
+        <th>Harga</th>
+        <th>Stok</th>
+        <th>Aksi</th>
+      </tr>
+    </thead>
+    <tbody id="isiTabel"></tbody>
+  </table>
+  <script src="admin.js"></script>
+</body>
+</html>
